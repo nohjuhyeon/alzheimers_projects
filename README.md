@@ -2,7 +2,7 @@
 # 알츠하이머 예측 및 치료 방안 모색 프로젝트
 
 # 주제 선정
- <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dd2d3692-f360-4147-9aa4-f658e43fd287">
+ <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/343dd121-805b-4575-8768-8088c0996f6c">
 
 1) 알츠하이머 환자수는 10년간 꾸준히 증가하는 추세를 보이고 있음.  
 2) 환자는 대부분 60대 이상으로 구성되어 있음.
@@ -12,7 +12,7 @@
 
 # 데이터
 ## 수집한 데이터 
-- [heart disease 2020](https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset/data) : 인구 통계적 세부 정보, 라이프스타일 요인, 병력, 임상 측정, 인지 및 기능 평가, 증상 및 알츠하이머병 진단이 포함되어 있는 데이터 세트
+- [alzheimers disease dataset](https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset/data) : 인구 통계적 세부 정보, 라이프스타일 요인, 병력, 임상 측정, 인지 및 기능 평가, 증상 및 알츠하이머병 진단이 포함되어 있는 데이터 세트
 - [알츠하이머 2014-2023 환자 통계](https://opendata.hira.or.kr/op/opc/olap3thDsInfoTab3.do#none) : 2014년부터 2023년까지 알츠하이머 환자 통계
 <br>
 
@@ -94,8 +94,11 @@
 - 수치형 변수 : 둘 다 정규 분포일 경우 t-검정, 비정규 분포를 포함할 경우 Mann Whitney U 검정
 
 ### 가설 검정 결과  
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/85fdf745-647b-453a-aa24-49593f21d9b3)
 - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/f7eb5a33-d4ed-4d7d-a208-fe63ca199f91)
 - BehavioralProblems가 없을 때에 비해 BehavioralProblems가 있을 때 알츠하이머가 있을 가능성이 약 29,4% 상승함(30.8% -> 60.2%)
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dcca1e7b-9575-4a07-ae52-6c320f044a97)
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 MMSE 점수가 5.58점 낮음.
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 FunctionalAssessment 점수가 2.95점 낮음.
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 ADL 점수가 2.90점 낮음.
@@ -109,7 +112,6 @@
 - 인적 사항, 증상, 병력, 일상 생활, 임상 측정이 인지 및 기능 평가의 변수들과 상관관계가 있다.
 
 ### 가설 검정 과정 
-
 - 인지 및 기능 평가 그룹에 범주형 변수와 수치형 변수가 섞여 있기 때문에 각각 검정 방법을 다르게 진행함. 
 - 인지 및 기능 평가 변수가 범주형 변수일 경우(MemoryComplaints, BehaviorProblems)
     - 범주형 변수 : 카이제곱 검정
@@ -119,9 +121,13 @@
     - 수치형 변수 : 둘 다 정규 분포일 경우 Pearson 상관관계 분석, 비정규 분포를 포함할 경우 Spearman 상관관계 분석
 
 ### 가설 검정 결과  
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/6d2be8fe-ff76-4198-ba0e-689ec3cc8286)
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/e84964e0-d33d-446f-bfcd-360a74194b26)
 - DifficultyCompletingTasks가 MemoryComplaints와 관련이 있다.
     - DifficultyCompletingTasks가 없을 때에 비해 DifficultyCompletingTasks가 있을 때 MemoryComplaints가 있을 가능성이 약 4.9% 상승함(20.03% -> 24.93%)
     - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 DifficultyCompletingTasks가 있을 가능성이 약 4.0% 상승함(15.04% -> 19.02%)
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/3d1fa67b-7770-4368-9349-e91593975e30)
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/ef854563-5034-4040-a247-f582b9f15782)
 - HeadInjury가 BehavioralProblems와 관련이 있다.
     - HeadInjury가 없을 때에 비해 HeadInjury가 있을 때 BehavioralProblems가 있을 가능성이 약 5.94% 상승함(15.15% -> 21.09%)
     - BehavioralProblems가 없을 때에 비해 BehavioralProblems가 있을 때 HeadInjury가 있을 가능성이 약 3.8% 상승함(8.66% -> 12.46%)
