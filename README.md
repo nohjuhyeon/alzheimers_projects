@@ -96,9 +96,9 @@
 ### 가설 검정 결과  
 <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/85fdf745-647b-453a-aa24-49593f21d9b3" width="300" height="200"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/f7eb5a33-d4ed-4d7d-a208-fe63ca199f91" width="300" height="200" >
 
-- MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
-- MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
-- BehavioralProblems가 없을 때에 비해 BehavioralProblems가 있을 때 알츠하이머가 있을 가능성이 약 29,4% 상승함(30.8% -> 60.2%)
+- MemoryComplaints가 있을 경우, 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
+- MemoryComplaints가 있을 경우, 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
+- BehavioralProblems가 있을 경우, 알츠하이머가 있을 가능성이 약 29,4% 상승함(30.8% -> 60.2%)
 
 <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dcca1e7b-9575-4a07-ae52-6c320f044a97" width=75% >
 
@@ -126,14 +126,14 @@
 ### 가설 검정 결과  
 <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/6d2be8fe-ff76-4198-ba0e-689ec3cc8286" width="300" height="200"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/e84964e0-d33d-446f-bfcd-360a74194b26" width="300" height="200">
 - DifficultyCompletingTasks가 MemoryComplaints와 관련이 있다.
-    - DifficultyCompletingTasks가 없을 때에 비해 DifficultyCompletingTasks가 있을 때 MemoryComplaints가 있을 가능성이 약 4.9% 상승함(20.03% -> 24.93%)
-    - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 DifficultyCompletingTasks가 있을 가능성이 약 4.0% 상승함(15.04% -> 19.02%)
+    - DifficultyCompletingTasks가 있을 경우, MemoryComplaints가 있을 가능성이 약 4.9% 상승함(20.03% -> 24.93%)
+    - MemoryComplaints가 있을 경우, DifficultyCompletingTasks가 있을 가능성이 약 4.0% 상승함(15.04% -> 19.02%)
 
 <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/3d1fa67b-7770-4368-9349-e91593975e30" width="300" height="200"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/ef854563-5034-4040-a247-f582b9f15782" width="300" height="200">
 
 - HeadInjury가 BehavioralProblems와 관련이 있다.
-    - HeadInjury가 없을 때에 비해 HeadInjury가 있을 때 BehavioralProblems가 있을 가능성이 약 5.94% 상승함(15.15% -> 21.09%)
-    - BehavioralProblems가 없을 때에 비해 BehavioralProblems가 있을 때 HeadInjury가 있을 가능성이 약 3.8% 상승함(8.66% -> 12.46%)
+    - HeadInjury가 있을 경우, BehavioralProblems가 있을 가능성이 약 5.94% 상승함(15.15% -> 21.09%)
+    - BehavioralProblems가 있을 경우, HeadInjury가 있을 가능성이 약 3.8% 상승함(8.66% -> 12.46%)
 
 ### 결론 
 - 기능 평가 결과 기억력에 문제가 있을 경우 업무 완료를 어려워하는 증상이 나타날 수 있다.
