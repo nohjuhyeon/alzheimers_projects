@@ -94,12 +94,12 @@
 - 수치형 변수 : 둘 다 정규 분포일 경우 t-검정, 비정규 분포를 포함할 경우 Mann Whitney U 검정
 
 ### 가설 검정 결과  
-<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/85fdf745-647b-453a-aa24-49593f21d9b3" width="400" height="300"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/f7eb5a33-d4ed-4d7d-a208-fe63ca199f91" width="400" height="300">
+<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/85fdf745-647b-453a-aa24-49593f21d9b3" width="400" height="300"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/f7eb5a33-d4ed-4d7d-a208-fe63ca199f91" width="400" height="300" >
 
 - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
 - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
 - BehavioralProblems가 없을 때에 비해 BehavioralProblems가 있을 때 알츠하이머가 있을 가능성이 약 29,4% 상승함(30.8% -> 60.2%)
-<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dcca1e7b-9575-4a07-ae52-6c320f044a97" width="400" height="300">
+<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dcca1e7b-9575-4a07-ae52-6c320f044a97" width=50% >
 
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 MMSE 점수가 5.58점 낮음.
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 FunctionalAssessment 점수가 2.95점 낮음.
