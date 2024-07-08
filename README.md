@@ -3,14 +3,16 @@
 
 ## 주제 선정
  <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dd2d3692-f360-4147-9aa4-f658e43fd287">
-1) 심장병과 관련된 진료를 보는 사람들이 매년 계속 증가하고 있음 
-2) 심장질환에 대한 사망률 역시 점점 증가하고 있음
--  심장병에 영향을 미치는 요인이 무엇인지 분석하고, 심장병을 예측하는 모델을 만들어 심장병을 예방할 수 있는 방안 모색
+
+1) 알츠하이머 환자수는 10년간 꾸준히 증가하는 추세를 보이고 있음.  
+2) 환자는 대부분 60대 이상으로 구성되어 있음.
+
+➡ 60-90로 구성되어 있는 환자들의 건강 정보를 포함하고 있는 데이터 셋을 활용하여 알츠하이머 예측 및 치료 방안으로 모색
 <br>
 
 ## 데이터
 ### 수집한 데이터 
-- [heart disease 2020](https://www.kaggle.com/datasets/aqleemkhan/heart-disease-2020/data) : 2020년 심장병과 관련이 있는 다양한 요소들에 대한 설문조사
+- [heart disease 2020](https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset/data) : 인구 통계적 세부 정보, 라이프스타일 요인, 병력, 임상 측정, 인지 및 기능 평가, 증상 및 알츠하이머병 진단이 포함되어 있는 데이터 세트
 - [알츠하이머 2014-2023 환자 통계](https://opendata.hira.or.kr/op/opc/olap3thDsInfoTab3.do#none) : 2014년부터 2023년까지 알츠하이머 환자 통계
 <br>
 
@@ -70,6 +72,7 @@
 |--|--|--|
 |python|Programming|프로그램 코드 작성|
 |Jupyter|Programming|오픈소스 웹 애플리케이션|
+|Tableu|Programming|데이터 시각화|
 |Collaboration tool|Docker|개발 환경 공유|
 <br>
 
