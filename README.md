@@ -1,7 +1,7 @@
 
 # 알츠하이머 예측 및 치료 방안 모색 프로젝트
 
-# 주제 선정
+# 1. 주제 선정
  <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/343dd121-805b-4575-8768-8088c0996f6c" width = '75%'>
 
 1) 알츠하이머 환자수는 10년간 꾸준히 증가하는 추세를 보이고 있음.  
@@ -10,7 +10,7 @@
 ➡ 60-90로 구성되어 있는 환자들의 건강 정보를 포함하고 있는 데이터 셋을 활용하여 알츠하이머 예측 및 치료 방안으로 모색
 <br>
 
-# 데이터
+# 2. 데이터
 ## 수집한 데이터 
 - [alzheimers disease dataset](https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset/data) : 인구 통계적 세부 정보, 라이프스타일 요인, 병력, 임상 측정, 인지 및 기능 평가, 증상 및 알츠하이머병 진단이 포함되어 있는 데이터 세트
 - [알츠하이머 2014-2023 환자 통계](https://opendata.hira.or.kr/op/opc/olap3thDsInfoTab3.do#none) : 2014년부터 2023년까지 알츠하이머 환자 통계
@@ -67,7 +67,7 @@
 |Diagnosis|알츠하이머 유무|0 : 없음, 1 : 예|DoctorInCharge|담당 의사에 대한 정보|'XXXConfid'|
 <br>
 
-# 주요 기술
+# 3. 주요 기술
 |소프트웨어|구분|활용 범위|
 |--|--|--|
 |python|Programming|프로그램 코드 작성|
@@ -77,13 +77,13 @@
 <br>
 
 
-# 파일 위치
+# 4. 파일 위치
 |분류|활동|날짜|진행 상황|파일 위치|
 |--|--|--|--|--|
 |Part 1|알츠하이머에 영향을 미치는 요인 분석|2024.07.04 ~ 2024.07.06|완료|[hypothesis testing](https://github.com/nohjuhyeon/alzheimers_projects/blob/main/docs/data_analysis/hypothesis_testing.ipynb)|
 |Part 2|알츠하이머 예측 모델 제작|2024.07.07 ~ |진행 중|[classification_model]()|
 
-# 진행 과정
+# 5. 진행 과정
 ## Part 1 : 알츠하이머에 영향을 미치는 요인 분석
 
 ### 첫번째 가설
