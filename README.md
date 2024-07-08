@@ -23,43 +23,43 @@
 |--|--|--|--|--|--|
 |PatientID|식별 번호|471-6900|Age|나이|60-90|
 |Gender|성별|0:남자, 1 : 여자|Ethnicity|인종|0:백인, 1 : 아프리카계 미국인, 2 : 아시아, 3 : 기타|
-|EducationLevel|교육 수준|0 : 없음, 1 : 고등학교, 2 : 학사, 3 : 더 높음|
+|Education Level|교육 수준|0 : 없음, 1 : 고등학교, 2 : 학사, 3 : 더 높음|
 
 ## 2. lifestype
 |column 명|설명|value|column 명|설명|value|
 |--|--|--|--|--|--|
-|Smoking|흡연 유/무|0 : 아니오, 1 : 예|AlcoholConsumption|주당 알코올 소비량|0-20|
-|PhysicalActivity|주간 신체 활동량|0-10|DietQuality|식단 품질|0-10|
-|SleepQuality|수면의 질|4-10|
+|Smoking|흡연 유/무|0 : 아니오, 1 : 예|Alcohol Consumption|주당 알코올 소비량|0-20|
+|Physical Activity|주간 신체 활동량|0-10|Diet Quality|식단 품질|0-10|
+|Sleep Quality|수면의 질|4-10|
 
 ## 3. 병력
 |column 명|설명|value|column 명|설명|value|
 |--|--|--|--|--|--|
-|FamilyHistoryAlzheimers|알츠하이머 가족력|0 : 없음, 1 : 예|CardiovascularDisease|심혈관 질환 유무|0 : 없음, 1 : 예|
+|Family History Alzheimers|알츠하이머 가족력|0 : 없음, 1 : 예|Cardiovascular Disease|심혈관 질환 유무|0 : 없음, 1 : 예|
 |Diabetes|당뇨병 유무|0 : 없음, 1 : 예|Depression|우울증 유무|0 : 없음, 1 : 예|
 |HeadInjury|두부 손상 유무|0 : 없음, 1 : 예|Hypertension|고혈압 유무|0 : 없음, 1 : 예|
 
 ## 4. 임상 측정
 |column 명|설명|value|column 명|설명|value|
 |--|--|--|--|--|--|
-|SystolicBP|수축기 혈압|90-180|DiastolicBP|이완기 혈압|60-120|
-|CholesterolTotal|콜레스테롤 총량|150-300|CholesterolLDL|LDL콜레스테롤 수치|50-200|
-|CholesterolHDL|HDL콜레스테롤 수치|20-100|CholesterolTriglycerides|중성지방|50-400|
+|Systolic BP|수축기 혈압|90-180|Diastolic BP|이완기 혈압|60-120|
+|Cholesterol Total|콜레스테롤 총량|150-300|Cholesterol LDL|LDL콜레스테롤 수치|50-200|
+|Cholesterol HDL|HDL콜레스테롤 수치|20-100|Cholesterol Triglycerides|중성지방|50-400|
 |BMI|신체질량지수|15-40|
 
 ## 5. 인지 및 기능 평가
 |column 명|설명|value|column 명|설명|value|
 |--|--|--|--|--|--|
-|MMSE|간이 정신 상태 검사 점수|0-30, 낮을수록 인지 장애가 있음|FunctionalAssessment|기능평가|0-10, 낮을수록 기능 장애가 심함|
-|MemoryComplaints|기억 장애 유무|0 : 없음, 1 : 예|BehavioralProblems|행동 문제 유무|0 : 없음, 1 : 예|
+|MMSE|간이 정신 상태 검사 점수|0-30, 낮을수록 인지 장애가 있음|Functional Assessment|기능평가|0-10, 낮을수록 기능 장애가 심함|
+|Memory Complaints|기억 장애 유무|0 : 없음, 1 : 예|Behavioral Problems|행동 문제 유무|0 : 없음, 1 : 예|
 |ADL|일상생활활동 점수|0-10, 낮을수록 장애가 심함|
 
 ## 6. 증상
 |column 명|설명|value|column 명|설명|value|
 |--|--|--|--|--|--|
 |Confusion|혼란의 유무|0 : 없음, 1 : 예|Disorientation|방향 감각 상실 유무|0 : 없음, 1 : 예|
-|PersonalityChanges|성격 변화 유무|0 : 없음, 1 : 예|DifficultyCompletingTasks|작업 완료 어려움 유무|0 : 없음, 1 : 예|
-|Forgetfulness|건망증 유무|0 : 없음, 1 : 예|
+|Personality Changes|성격 변화 유무|0 : 없음, 1 : 예|Difficulty Completing Tasks|작업 완료 어려움 유무|0 : 없음, 1 : 예|
+|Forget fulness|건망증 유무|0 : 없음, 1 : 예|
 
 ## 7. 진단
 |column 명|설명|value|column 명|설명|value|
