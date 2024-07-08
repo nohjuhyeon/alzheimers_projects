@@ -2,7 +2,7 @@
 # 알츠하이머 예측 및 치료 방안 모색 프로젝트
 
 # 주제 선정
- <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/343dd121-805b-4575-8768-8088c0996f6c">
+ <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/343dd121-805b-4575-8768-8088c0996f6c" width = '75%'>
 
 1) 알츠하이머 환자수는 10년간 꾸준히 증가하는 추세를 보이고 있음.  
 2) 환자는 대부분 60대 이상으로 구성되어 있음.
@@ -94,12 +94,13 @@
 - 수치형 변수 : 둘 다 정규 분포일 경우 t-검정, 비정규 분포를 포함할 경우 Mann Whitney U 검정
 
 ### 가설 검정 결과  
-<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/85fdf745-647b-453a-aa24-49593f21d9b3" width="400" height="300"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/f7eb5a33-d4ed-4d7d-a208-fe63ca199f91" width="400" height="300" >
+<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/85fdf745-647b-453a-aa24-49593f21d9b3" width="500" height="400"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/f7eb5a33-d4ed-4d7d-a208-fe63ca199f91" width="500" height="400" >
 
 - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
 - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 알츠하이머가 있을 가능성이 약 36.1% 상승함(27.9% -> 64%)
 - BehavioralProblems가 없을 때에 비해 BehavioralProblems가 있을 때 알츠하이머가 있을 가능성이 약 29,4% 상승함(30.8% -> 60.2%)
-<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dcca1e7b-9575-4a07-ae52-6c320f044a97" width=50% >
+
+<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dcca1e7b-9575-4a07-ae52-6c320f044a97" width=75% >
 
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 MMSE 점수가 5.58점 낮음.
 - 알츠하이머가 있는 그룹이 없는 그룹에 비해 FunctionalAssessment 점수가 2.95점 낮음.
@@ -123,11 +124,12 @@
     - 수치형 변수 : 둘 다 정규 분포일 경우 Pearson 상관관계 분석, 비정규 분포를 포함할 경우 Spearman 상관관계 분석
 
 ### 가설 검정 결과  
-<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/6d2be8fe-ff76-4198-ba0e-689ec3cc8286" width="400" height="300"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/e84964e0-d33d-446f-bfcd-360a74194b26" width="400" height="300">
+<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/6d2be8fe-ff76-4198-ba0e-689ec3cc8286" width="500" height="400"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/e84964e0-d33d-446f-bfcd-360a74194b26" width="500" height="400">
 - DifficultyCompletingTasks가 MemoryComplaints와 관련이 있다.
     - DifficultyCompletingTasks가 없을 때에 비해 DifficultyCompletingTasks가 있을 때 MemoryComplaints가 있을 가능성이 약 4.9% 상승함(20.03% -> 24.93%)
     - MemoryComplaints가 없을 때에 비해 MemoryComplaints가 있을 때 DifficultyCompletingTasks가 있을 가능성이 약 4.0% 상승함(15.04% -> 19.02%)
-<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/3d1fa67b-7770-4368-9349-e91593975e30" width="400" height="300"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/ef854563-5034-4040-a247-f582b9f15782" width="400" height="300">
+
+<img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/3d1fa67b-7770-4368-9349-e91593975e30" width="500" height="400"> <img src="https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/ef854563-5034-4040-a247-f582b9f15782" width="500" height="400">
 
 - HeadInjury가 BehavioralProblems와 관련이 있다.
     - HeadInjury가 없을 때에 비해 HeadInjury가 있을 때 BehavioralProblems가 있을 가능성이 약 5.94% 상승함(15.15% -> 21.09%)
