@@ -237,6 +237,7 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 #### 4. 모델 평가
 ![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/433cb41a-eab0-4c9e-a2ab-5a1064a4704e)
 - 기존의 모델(RandomForest Classifier, K-Nearest Neighbor)와 하이퍼 파라미터 튜닝 후 모델, Stacking, Boosting 알고리즘을 적용한 모델의 성능을 평가한 결과, 하이퍼파라미터 튜닝을 하지 않은 기존의 RandomForest Classifier와 Boosting 알고리즘을 적용한 모델이 가장 높은 성능을 보임 
+
 ![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/17f38229-2238-45ff-85f2-48499b277976)
 - 실행 시간도 비교해본 결과, 기존의 RandomForestClassifier가 상대적으로 적은 시간이 소요됨.
 
