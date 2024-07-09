@@ -139,5 +139,46 @@
 - 기능 평가 결과 기억력에 문제가 있을 경우 업무 완료를 어려워하는 증상이 나타날 수 있다.
 - 두부 손상을 당한 병력이 있으면 기능 평가에서 행동에 문제가 있을 수 있다.
 
-## Part 2 : 알츠하이머 예측 모델 제작
+## 최종 결론
+1. 인지 및 기능 평가 그룹이 알츠하이머 유/무와 상관관계가 있음. 인지 및 기능 평가 그룹을 이용하여 알츠하이머 유/무를 예측하는 모델을 제작
+2. 두부 손상과 업무 완료 어려움이 각각 기능 평가와 기억력에 영향을 줄 수 있음. 60세 이상의 환자가 두부 손상을 당한 병력이 있거나 평소 업무 완료 어려움을 겪는다면 인지 및 기능 평가를 통해 알츠하이머 검사를 진행하는 것을 고려
 
+## Part 2 : 인지 및 기능 평가그룹으로 알츠하이머 예측 모델 제작
+
+### 독립 변수와 종속 변수
+- 독립 변수 : MMSE, FunctionalAssessment, MemoryComplaints, BehavioralProblems, ADL
+- 종속 변수 : Diagnosis
+
+### 데이터 전처리
+#### 1. 데이터 정규화 
+~~~
+scaler = MinMaxScaler()
+for i in ['MMSE','FunctionalAssessment','ADL']:
+    df[i] = scaler.fit_transform(df[[i]])
+~~~
+
+#### 2. 데이터 샘플링 : SMOTE
+~~~
+from imblearn.over_sampling import SMOTENC
+import pandas as pd
+cate_columns = ['MemoryComplaints','BehavioralProblems']
+cate_indices = [df.columns.get_loc(col) for col in cate_columns]
+cate_indices
+
+# SMOTENC 적용
+overSampling = SMOTENC(categorical_features=cate_indices, sampling_strategy=0.9, random_state=42)
+feature = df.drop('Diagnosis', axis=1)
+target = df['Diagnosis']
+feature_sample, target_sample = overSampling.fit_resample(feature, target)
+df = pd.concat([feature_sample, target_sample], axis=1)
+~~~
+
+### train, test 데이터셋 분리
+~~~
+feature = df.drop('Diagnosis',axis=1)
+target = df['Diagnosis']
+train_feature, test_feature,train_target,test_target = train_test_split(feature,target,test_size= 0.3,random_state = 23)
+~~~
+
+### 분류 모델링
+#### 1. 성능 좋은 모델 선택
