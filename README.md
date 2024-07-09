@@ -186,7 +186,7 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 - 정확성, F-1 점수, ROC-AUC 점수를 토대로 분류 모델을 평가한 결과, RandomForest Classifier와 K-Nearest Neighbor가 가장 높은 성능을 보임.
 - 두 모델을 하이퍼 파라미터 튜닝을 통해 모델의 성능이 더 올라가는지 확인
 
-#### 2. 하이퍼 파라미터 튜닝
+#### 2. Hyperparameter Tuning : Grid Search
 - RandomForest Classifier 하이퍼 파라미터 튜닝 과정 
     ~~~
     from sklearn.model_selection import GridSearchCV
@@ -216,3 +216,31 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 
     KNN_grid_model = GridSearchCV(KNN_estimator_model,hyper_parameters, scoring = scoring) 
     ~~~
+
+#### 3. Ensemble Algorism : Stacking, Boosting 
+- Stacking 
+    ~~~ 
+    from sklearn.ensemble import AdaBoostClassifier, StackingClassifier
+    stackingclassifier = StackingClassifier(
+    estimators=[('rf', RFC_best_model), ('knn', KNN_best_model)],
+    final_estimator=RFC_best_model)
+
+    stackingclassifier.fit(stacking_train_feature,stacking_train_target)
+    ~~~
+- Boosting 
+    ~~~
+    from sklearn.ensemble import AdaBoostClassifier, StackingClassifier
+    adaboostclassifier = AdaBoostClassifier(RFC_best_model)
+    adaboostclassifier.fit(adaboost_train_feature,adaboost_train_target)
+    ~~~
+
+#### 4. 모델 평가
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/433cb41a-eab0-4c9e-a2ab-5a1064a4704e)
+- 기존의 모델(RandomForest Classifier, K-Nearest Neighbor)와 하이퍼 파라미터 튜닝 후 모델, Stacking, Boosting 알고리즘을 적용한 모델의 성능을 평가한 결과, 하이퍼파라미터 튜닝을 하지 않은 기존의 RandomForest Classifier와 Boosting 알고리즘을 적용한 모델이 가장 높은 성능을 보임 
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/17f38229-2238-45ff-85f2-48499b277976)
+- 실행 시간도 비교해본 결과, 기존의 RandomForestClassifier가 상대적으로 적은 시간이 소요됨.
+
+#### 5. 결론
+- RandomForestClassifier는 기본 설정만으로도 높은 성능을 보였다.
+- 하이퍼파라미터 튜닝과 앙상블 알고리즘을 적용해 성능을 더 향상시킬 수 있을지 기대했지만, 오히려 복잡도와 실행 시간만 증가하였다. 
+- 기존 모델이 이미 높은 성능을 보이고 과적합의 위험이 낮다면, 추가적으로 stacking이나 boosting을 사용할 필요는 없을 것 같다.
