@@ -46,7 +46,7 @@
 |Cholesterol Total|콜레스테롤 총량|150-300|Cholesterol LDL|LDL콜레스테롤 수치|50-200|
 |Cholesterol HDL|HDL콜레스테롤 수치|20-100|Cholesterol Triglycerides|중성지방|50-400|
 |BMI|신체질량지수|15-40|
-
+ 
 ### 5. 인지 및 기능 평가
 |column 명|설명|value|column 명|설명|value|
 |--|--|--|--|--|--|
