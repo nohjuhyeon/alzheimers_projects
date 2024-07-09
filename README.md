@@ -182,3 +182,37 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 
 ### 분류 모델링
 #### 1. 성능 좋은 모델 선택
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/d345a64e-87b7-467e-ba37-5092dbce77ac)
+- 정확성, F-1 점수, ROC-AUC 점수를 토대로 분류 모델을 평가한 결과, RandomForest Classifier와 K-Nearest Neighbor가 가장 높은 성능을 보임.
+- 두 모델을 하이퍼 파라미터 튜닝을 통해 모델의 성능이 더 올라가는지 확인
+
+#### 2. 하이퍼 파라미터 튜닝
+- RandomForest Classifier 하이퍼 파라미터 튜닝 과정 
+    ~~~
+    from sklearn.model_selection import GridSearchCV
+    from sklearn.metrics import f1_score, make_scorer
+    from sklearn.ensemble import RandomForestClassifier
+    hyper_parameters = {'n_estimators': range(100,500), 'max_depth': range(3,10), 'min_samples_split':range(2,10)}
+    RFC_estimator_model=RandomForestClassifier()
+
+    # score 방식 지정
+    scoring =  make_scorer(roc_auc_score)
+
+
+    RFC_grid_model = GridSearchCV(RFC_estimator_model, hyper_parameters, scoring = scoring) 
+    ~~~
+- K-Nearest Neighbor 하이퍼 파라미터 튜닝 과정
+    ~~~
+    from sklearn.model_selection import GridSearchCV
+    from sklearn.metrics import f1_score, make_scorer
+    from sklearn.neighbors import KNeighborsClassifier
+    # n_estimators : 177
+    hyper_parameters = {'n_neighbors': range(1,15),'weights': ['uniform', 'distance'], 'metric': ['euclidean', 'manhattan', 'minkowski'], 'p': [1, 2]}
+    KNN_estimator_model = KNeighborsClassifier()
+
+    # score 방식 지정
+    scoring =  make_scorer(roc_auc_score)
+
+
+    KNN_grid_model = GridSearchCV(KNN_estimator_model,hyper_parameters, scoring = scoring) 
+    ~~~
