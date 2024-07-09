@@ -81,7 +81,7 @@
 |분류|활동|날짜|진행 상황|파일 위치|
 |--|--|--|--|--|
 |Part 1|알츠하이머에 영향을 미치는 요인 분석|2024.07.04 ~ 2024.07.06|완료|[hypothesis testing](https://github.com/nohjuhyeon/alzheimers_projects/blob/main/docs/data_analysis/hypothesis_testing.ipynb)|
-|Part 2|알츠하이머 예측 모델 제작|2024.07.07 ~ |진행 중|[classification_model]()|
+|Part 2|알츠하이머 예측 모델 제작|2024.07.07 ~ |진행 중|[classification_model_expert](https://github.com/nohjuhyeon/alzheimers_projects/blob/main/docs/machine_modeling/classification_model_expert.ipynb)|
 
 # 5. 진행 과정
 ## Part 1 : 알츠하이머에 영향을 미치는 요인 분석
