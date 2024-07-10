@@ -182,7 +182,7 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 
 ### 분류 모델링
 #### 1. 성능 좋은 모델 선택
-![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/d345a64e-87b7-467e-ba37-5092dbce77ac)
+![분류 모델의 성능 지표 비교](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/dffdeee5-0912-44f9-ad50-3fb0bc0d51aa)
 - 정확성, F-1 점수, ROC-AUC 점수를 토대로 분류 모델을 평가한 결과, RandomForest Classifier와 K-Nearest Neighbor, Support Vector Machine이 전반적으로 높은 성능을 보임.
 - 세 모델을 하이퍼 파라미터 튜닝을 통해 모델의 성능이 더 올라가는지 확인
 
@@ -250,10 +250,10 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
     ~~~
 
 #### 4. 모델 평가
-![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/8d6e5b38-5375-43c7-86c6-68ac698e1462)
+![분류 모델의 성능 지표 비교_2](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/c1fbb8b0-07a0-4c5e-9ba1-eaaa3a264a2b)
 - 기존의 모델(RandomForest Classifier, K-Nearest Neighbor,Support Vector Machine)와 하이퍼 파라미터 튜닝 후 모델, Stacking, Boosting 알고리즘을 적용한 모델의 성능을 평가한 결과, 하이퍼파라미터 튜닝을 하지 않은 기존의 RandomForest Classifier와 Boosting 알고리즘을 적용한 모델이 가장 높은 성능을 보임 
 
-![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/9479ca67-5638-4a69-89da-9ab5bc2717a3)
+![분류 모델의 실행 시간 비교](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/e3f3c84a-4a9d-4f1c-996c-cfb34730c81c)
 - 실행 시간도 비교해본 결과, 기존의 RandomForestClassifier가 상대적으로 적은 시간이 소요됨.
 
 #### 5. 결론
