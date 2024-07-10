@@ -183,8 +183,8 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 ### 분류 모델링
 #### 1. 성능 좋은 모델 선택
 ![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/d345a64e-87b7-467e-ba37-5092dbce77ac)
-- 정확성, F-1 점수, ROC-AUC 점수를 토대로 분류 모델을 평가한 결과, RandomForest Classifier와 K-Nearest Neighbor가 가장 높은 성능을 보임.
-- 두 모델을 하이퍼 파라미터 튜닝을 통해 모델의 성능이 더 올라가는지 확인
+- 정확성, F-1 점수, ROC-AUC 점수를 토대로 분류 모델을 평가한 결과, RandomForest Classifier와 K-Nearest Neighbor, Support Vector Machine이 전반적으로 높은 성능을 보임.
+- 세 모델을 하이퍼 파라미터 튜닝을 통해 모델의 성능이 더 올라가는지 확인
 
 #### 2. Hyperparameter Tuning : Grid Search
 - RandomForest Classifier 하이퍼 파라미터 튜닝 과정 
@@ -216,19 +216,20 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 
     KNN_grid_model = GridSearchCV(KNN_estimator_model,hyper_parameters, scoring = scoring) 
     ~~~
-- Supoort Vecotr Machine 하이퍼 파라미터 튜닝 과정 
+- Supoort Vector Machine 하이퍼 파라미터 튜닝 과정 
     ~~~
     from sklearn.model_selection import GridSearchCV
     from sklearn.metrics import f1_score, make_scorer
-    from sklearn.ensemble import RandomForestClassifier
-    hyper_parameters = {'n_estimators': range(100,500), 'max_depth': range(3,10), 'min_samples_split':range(2,10)}
-    RFC_estimator_model=RandomForestClassifier()
+    from sklearn.neighbors import KNeighborsClassifier
+    # n_estimators : 177
+    hyper_parameters = {'C': [0.1, 1, 10, 100], 'gamma': [1, 0.1, 0.01, 0.001], 'kernel': ['rbf', 'linear']}
+    SVM_estimator_model = svm.SVC(probability=True)
 
     # score 방식 지정
-    scoring =  make_scorer(roc_auc_score)
+    scoring =  make_scorer(accuracy_score)
 
 
-    RFC_grid_model = GridSearchCV(RFC_estimator_model, hyper_parameters, scoring = scoring) 
+    SVM_grid_model = GridSearchCV(SVM_estimator_model,hyper_parameters, scoring = scoring) 
     ~~~
 
 #### 3. Ensemble Algorism : Stacking, Boosting 
@@ -236,8 +237,8 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
     ~~~ 
     from sklearn.ensemble import AdaBoostClassifier, StackingClassifier
     stackingclassifier = StackingClassifier(
-    estimators=[('rf', RFC_best_model), ('knn', KNN_best_model)],
-    final_estimator=RFC_best_model)
+        estimators=[('svc', SVM_best_model), ('knn', KNN_best_model)],
+        final_estimator=RFC_best_model)
 
     stackingclassifier.fit(stacking_train_feature,stacking_train_target)
     ~~~
@@ -249,10 +250,10 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
     ~~~
 
 #### 4. 모델 평가
-![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/433cb41a-eab0-4c9e-a2ab-5a1064a4704e)
-- 기존의 모델(RandomForest Classifier, K-Nearest Neighbor)와 하이퍼 파라미터 튜닝 후 모델, Stacking, Boosting 알고리즘을 적용한 모델의 성능을 평가한 결과, 하이퍼파라미터 튜닝을 하지 않은 기존의 RandomForest Classifier와 Boosting 알고리즘을 적용한 모델이 가장 높은 성능을 보임 
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/8d6e5b38-5375-43c7-86c6-68ac698e1462)
+- 기존의 모델(RandomForest Classifier, K-Nearest Neighbor,Support Vector Machine)와 하이퍼 파라미터 튜닝 후 모델, Stacking, Boosting 알고리즘을 적용한 모델의 성능을 평가한 결과, 하이퍼파라미터 튜닝을 하지 않은 기존의 RandomForest Classifier와 Boosting 알고리즘을 적용한 모델이 가장 높은 성능을 보임 
 
-![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/17f38229-2238-45ff-85f2-48499b277976)
+![image](https://github.com/nohjuhyeon/alzheimers_projects/assets/151099184/9479ca67-5638-4a69-89da-9ab5bc2717a3)
 - 실행 시간도 비교해본 결과, 기존의 RandomForestClassifier가 상대적으로 적은 시간이 소요됨.
 
 #### 5. 결론
