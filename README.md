@@ -216,6 +216,20 @@ train_feature, test_feature,train_target,test_target = train_test_split(feature,
 
     KNN_grid_model = GridSearchCV(KNN_estimator_model,hyper_parameters, scoring = scoring) 
     ~~~
+- Supoort Vecotr Machine 하이퍼 파라미터 튜닝 과정 
+    ~~~
+    from sklearn.model_selection import GridSearchCV
+    from sklearn.metrics import f1_score, make_scorer
+    from sklearn.ensemble import RandomForestClassifier
+    hyper_parameters = {'n_estimators': range(100,500), 'max_depth': range(3,10), 'min_samples_split':range(2,10)}
+    RFC_estimator_model=RandomForestClassifier()
+
+    # score 방식 지정
+    scoring =  make_scorer(roc_auc_score)
+
+
+    RFC_grid_model = GridSearchCV(RFC_estimator_model, hyper_parameters, scoring = scoring) 
+    ~~~
 
 #### 3. Ensemble Algorism : Stacking, Boosting 
 - Stacking 
